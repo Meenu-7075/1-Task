@@ -1,0 +1,117 @@
+
+(root㉿kali)-[~]
+└─# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.254.132  netmask 255.255.255.0  broadcast 192.168.254.255
+        inet6 fe80::20c:29ff:fe25:6bd4  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:25:6b:d4  txqueuelen 1000  (Ethernet)
+        RX packets 33031  bytes 2061833 (1.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 147568  bytes 8897659 (8.4 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 264816  bytes 11130820 (10.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 264816  bytes 11130820 (10.6 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# sudo nmap -sS 192.168.254.0/24 
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-22 10:35 EDT
+Nmap scan report for 192.168.254.1
+Host is up (0.00022s latency).
+All 1000 scanned ports on 192.168.254.1 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+
+Nmap scan report for 192.168.254.2
+Host is up (0.00019s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 00:50:56:E5:69:59 (VMware)
+
+Nmap scan report for 192.168.254.254
+Host is up (0.00024s latency).
+All 1000 scanned ports on 192.168.254.254 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:F9:91:39 (VMware)
+
+Nmap scan report for 192.168.254.132
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 192.168.254.132 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 8.78 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 192.168.254.2
+192.168.254.2: command not found
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 192.168.254.2?
+192.168.254.2?: command not found
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# sudo nmap -sS 192.168.254.2 
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-22 10:38 EDT
+Nmap scan report for 192.168.254.2
+Host is up (0.00027s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 00:50:56:E5:69:59 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# nmap -sS 192.168.1.0/24 -oN scan_results.txt
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-22 11:11 EDT
+Warning: 192.168.1.13 giving up on port because retransmission cap hit (10).
+Warning: 192.168.1.19 giving up on port because retransmission cap hit (10).
+Warning: 192.168.1.27 giving up on port because retransmission cap hit (10).
+
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# sudo nmap -sS 192.168.1.0/24 -oN scan_results.txt 
+
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-22 11:16 EDT
+
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# sudo nmap -sS 192.168.254.0/24 -oN scan_results.txt
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-09-22 11:19 EDT
+Nmap scan report for 192.168.254.1
+Host is up (0.0013s latency).
+All 1000 scanned ports on 192.168.254.1 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+
+Nmap scan report for 192.168.254.2
+Host is up (0.00020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 00:50:56:E5:69:59 (VMware)
+
+Nmap scan report for 192.168.254.254
+Host is up (0.00028s latency).
+All 1000 scanned ports on 192.168.254.254 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:F9:91:39 (VMware)
+
+Nmap scan report for 192.168.254.132
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 192.168.254.132 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 8.56 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 
