@@ -1,6 +1,6 @@
 # Task 1 — Local Network Port Scanning (Nmap)
 
-**Objective:**  
+## Objective
 Perform network reconnaissance on a local network to discover open ports and services, save scan results, analyze security risks, and suggest mitigations.
 
 ## Tools
